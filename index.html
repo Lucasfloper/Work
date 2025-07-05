@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Titulo 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #1E0E3E;
+      background-image: url(off://raw.githubusercontent.com/Lucasfloper/HTML/refs/heads/main/fundo-de-gradiente-azul-07xqmk2r9n9vmxli.webp);
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .bloco {
+      background-color: rgba(0,0,0,0.1);
+      border: 2px solid #ffffff55;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 360px;
+      margin: 60px auto;
+      margin-left: 16px;
+      margin-right: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+
+    .bloco h2 {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(90deg, #F8CB1F, #FC7717);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 25px;
+    }
+
+    .meu-paragrafo {
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .linha-divisoria {
+      border: none;
+      height: 2px;
+      background-color: #ffffff55;
+      margin: 30px 30px;
+      border-radius: 4px;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      border: none;
+      display: block;
+    }
+
+    .caixa-texto {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #ffffff33;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .caixa-texto:hover {
+      transform: scale(1.04);
+    }
+
+    .caixa-texto::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        135deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 60%
+      );
+      animation: brilho-inclinado 3s infinite linear;
+      pointer-events: none;
+    }
+
+    @keyframes brilho-inclinado {
+      0% {
+        transform: translate(-100%, -100%);
+      }
+      100% {
+        transform: translate(100%, 100%);
+      }
+    }
+
+    .caixa-texto .texto-meio {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .caixa-texto .texto-baixo {
+      font-size: 14px;
+      opacity: 0.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px #26D367;
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 5px #26D367;
+        transform: scale(1.05);
+      }
+    }
+
+    .botao-link {
+      margin: 40px auto 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 40px;
+      background-color: #26D367;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      animation: pulse 3s infinite ease-in-out;
+      width: fit-content;
+    }
+
+    .botao-link .icone-botao {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 400px) {
+      .bloco {
+        padding: 20px;
+        max-width: 90%;
+        margin: 30px auto;
+      }
+
+      .bloco h2 {
+        font-size: 20px;
+      }
+
+      .meu-paragrafo {
+        font-size: 14px;
+      }
+
+      .caixa-texto .texto-meio {
+        font-size: 15px;
+      }
+
+      .caixa-texto .texto-baixo {
+        font-size: 13px;
+      }
+
+      .botao-link {
+        padding: 15px 30px;
+        font-size: 14px;
+      }
+
+      .botao-link .icone-botao {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bloco">
+    <h2>CHEGA DE TRAVAMENTOS</h2>
+
+    <p class="meu-paragrafo">
+      TESTE GRÁTIS NOSSO OTT PLUS
+    </p>
+
+    <hr class="linha-divisoria" />
+
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Video de exemplo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Caixa de informação -->
+    <div class="caixa-texto">
+      <div class="texto-meio">ZERO TRAVAMENTOS</div>
+      <div class="texto-baixo">100% ESTÁVEL | SEM DELAY</div>
+    </div>
+
+    <a href="https://seulink.com" class="botao-link" target="_blank">
+      <img src="https://i.ibb.co/jvw2gZCf/whatsapp-1-1.png" alt="Ícone" class="icone-botao">
+      <span>QUERO TESTAR</span>
+    </a>
+  </div>
+
+</body>
+</html>
